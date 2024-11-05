@@ -1,7 +1,7 @@
-const DocsIdPage = () => {
+const DocsIdPage = ({ params }) => {
     return (
         <div>
-            <h1>DocsId Page</h1>
+            <h1>id { params.id }</h1>
         </div>
     )
 }
