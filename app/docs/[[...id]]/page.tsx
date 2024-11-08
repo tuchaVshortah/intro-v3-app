@@ -1,6 +1,8 @@
+import styles from './style.module.css'
+
 const DocsPage = () => {
   return (
-    <div>DocsPage</div>
+    <div className={styles.title}>DocsPage</div>
   )
 }
 
