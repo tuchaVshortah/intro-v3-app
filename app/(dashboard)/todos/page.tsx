@@ -1,9 +1,19 @@
-const TodosPage = () => {
-    return (
-        <div>
-            <h1>Todos Page</h1>
-        </div>
-    )
+import TodoList from '@/components/TodoList'
+import db from '@/utils/db'
+
+const getData = async () => {
+  const todos = await db.todo.findMany({})
+  return todos
 }
 
-export default TodosPage;
+const TodosPage = async () => {
+  const todos = await getData();
+
+  return (
+    <div>
+      <TodoList todos={todos} />
+    </div>
+  )
+}
+
+export default TodosPage
