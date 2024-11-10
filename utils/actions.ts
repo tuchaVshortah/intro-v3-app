@@ -5,10 +5,10 @@ interface newTodoProps {
     content: string
 }
 
-export const newTodo = async ({ content }: newTodoProps) => {
+export const newTodo = async (formData: FormData) => {
     const todo = await db.todo.create({
         data: {
-            content: content,
+            content: formData.get('content') as string,
         }
     })
 }
