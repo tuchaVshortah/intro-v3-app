@@ -1,3 +1,4 @@
+import NewTodoForm from '@/components/NewTodoForm'
 import React from 'react'
 
 const DashboardLayout = ({
@@ -8,6 +9,9 @@ const DashboardLayout = ({
   return (
     <div>
       <h1>DashboardLayout</h1>
+      <div>
+        <NewTodoForm />
+      </div>
       <div>{children}</div>
     </div>
   )
