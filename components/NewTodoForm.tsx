@@ -1,8 +1,12 @@
 import React from 'react'
 
-const NewTodoForm = () => {
+const NewTodoForm = ({ }) => {
   return (
-    <div>NewTodoForm</div>
+    <div>
+      <form action="" className='border border-black/25'>
+        <input type="text" />
+      </form>
+    </div>
   )
 }
 
