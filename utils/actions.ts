@@ -6,7 +6,7 @@ interface newTodoProps {
     content: string
 }
 
-export const completeTodo = async (id) => {
+export const completeTodo = async (id: string) => {
   await db.todo.update({
     where: { id },
     data: { completed: true },
